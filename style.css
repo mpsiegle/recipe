@@ -55,14 +55,15 @@ table {
 }
 
 html{
-	min-width: 414px;
 	border: 35px solid var(--lt-blue);
+	min-width: 414px;
 }
 
 body{
 	padding: 0;
     margin: 0;
     width: 100%;
+	min-width: 414px;
 }
 
 p, dd, li, nav, input{
@@ -93,13 +94,11 @@ main img{
 
 
 menu{
-	display: flex;
-	position: relative;
-	left: 30px;
 	text-decoration: none;
-	list-style: none;
+	display: flex;
 	justify-content: center;
-	padding: 25px;
+	list-style: none;
+	gap: 50px;
 }
 
 menu li{
@@ -113,13 +112,8 @@ menu li{
 }
 
 menu span{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 25px;
-}
-
-#jump span{
-	max-width: 100ch;
+	display: flex;
+	position: relative;
 }
 
 p{
@@ -165,23 +159,61 @@ h2{
 	background-color: var(--blue);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	row-gap: 50px;
 }
 
 #sides h2{
 	grid-column: 1/ span 2;
 	padding-top: 15px;
-	padding-bottom: 20px;
 }
 
-#sides img{
+
+
+#sides svg{
+	position: relative;
+	left: 200px;
+	bottom: 20px;
+}
+
+#sides span{
+	position: relative;
+	left: 200px;
+	bottom: 60px;
+	font-weight: bold;
+}
+
+#images{
 	width: 75%;
 	height: 75%;
 	grid-column: 1;
+	padding: 4px;
+}
+
+#images img{
+	padding-top: 10px;
+}
+
+
+#sides dl{
+	display: grid;
+}
+
+#sides dt{
+	font-family: "Montserrat", sans-serif ;
+	font-weight: bold;
+	position: relative;
+	top: 35px;
 }
 
 #sides dl{
-	color: red;
+	position: relative;
+	bottom: 20px;
 }
+
+#filled{
+	fill: var(--orange);
+}
+
 
 nav {
 	grid-area: nav;
@@ -295,6 +327,7 @@ nav h2 {
 
 footer{
 	text-align: center;
+	font-weight: bold;
 }
 
 footer img{
@@ -304,6 +337,20 @@ footer img{
 footer p{
 	padding: 0;
 	padding-top: 10px;
+}
+
+#social span:hover, header span:hover{
+	background-color: var(--orange);
+	color: var(--white);
+}
+
+#dropdown:hover{
+	background-color: #0D0D0D;
+}
+
+nav li:hover{
+	background-color: var(--orange);
+	color: var(--white);
 }
 
 @media screen and (min-width: 414px) {
@@ -316,6 +363,155 @@ footer p{
 @media screen and (min-width: 768px) {
 	h1{
 		color: orange;
+		text-align: left;
+	}
+
+
+
+	header{
+		height: 40px;
+	}
+
+	menu{
+		backdrop-filter: blur(25px);
+		gap: 150px;
+		background-color: rgba(248, 248, 248, 0.5);
+		width: 129%;
+		position: relative;
+		right: 80px;
+
+	}
+
+	main img{
+		width: 100%;
+	}
+
+	html{
+		border: 50px solid var(--lt-blue);
+	}
+
+	#details ul{
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+	#split{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#sides{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+
+	#sides h2{
+		grid-column: 1 / span 4;
+	}
+
+	footer img{
+		width: 25%;
+	}
+
+	footer{
+		position: relative;
+		right: 250px;
+		bottom: 75px;
+	}
+
+	#social{
+		position: relative;
+		left: 150px;
+		top: 60px;
+	}
+
+	#fb span{
+		position: relative;
+		top: 9px;
+		right: 40px;
+	}
+
+	#fb{
+		position: relative;
+		left: 100px;
+	}
+	#insta{
+		position: relative;
+		left: 75px;
+	}
+	#youtube{
+		position: relative;
+		left: 50px;
 	}
 	
+
+	#insta span{
+		position: relative;
+		top: 9px;
+		right: 40px;
+	}
+
+	#youtube span{
+		position: relative;
+		top: 9px;
+		right: 40px;
+	}
+
+
+
+
+
+}
+
+@media screen and (min-width: 1280px) {
+	h1{
+		color: green;
+		text-align: center;
+	}
+
+	menu{
+		display: inline;
+		position: relative;
+		top: 50px;
+	}
+	
+	#top{
+		display: grid;
+		grid-row: 1fr 1fr;
+	}
+
+	#top img{
+		width: 80% ;
+		grid-column: 1;
+	}
+
+	#top p{
+		grid-column: 2;
+		word-spacing: 4px;
+		line-height: 30px;
+	}
+
+	.search{
+		left: 600px;
+	}
+
+	nav{
+		height: 40px;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav li img {
+		display:block;
+		bottom: 50px;
+	}
+
+
+	
+
+
+
 }
