@@ -193,9 +193,10 @@ h2{
 	padding-top: 10px;
 }
 
-
 #sides dl{
 	display: grid;
+	position: relative;
+	bottom: 20px;
 }
 
 #sides dt{
@@ -205,12 +206,7 @@ h2{
 	top: 35px;
 }
 
-#sides dl{
-	position: relative;
-	bottom: 20px;
-}
-
-#filled{
+.filled{
 	fill: var(--orange);
 }
 
@@ -226,7 +222,7 @@ nav {
 }
 
 nav ul {
-	grid-area: hamburger;
+	grid-area: hamberger;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -275,9 +271,32 @@ nav h2 {
 	width: 1px;
 }
 
+nav{
+	max-width: 85%;
+	min-width: 86%;
+}
+
+#logo{
+	position: relative;
+	left: 125px;
+}
+
+#sign-in{
+	position: relative;
+	left: 230px;
+	bottom: 15px;
+	text-decoration: none;
+}
+
+#sign-in span{
+	position: relative;
+	left: 110px;
+}
+
+
 .search{
 	position: absolute;
-	bottom: 800px;
+	bottom: 770px;
 	display: block;
 	left: 120px;
 	border: 3px solid var(--orange);
@@ -390,10 +409,19 @@ nav li:hover{
 		border: 50px solid var(--lt-blue);
 	}
 
-	#details ul{
-		text-align: center;
-		padding-bottom: 20px;
+	#details{
+		display: inline;
 	}
+
+	#details li{
+		display: flex;
+		justify-content: center;
+	}
+
+	#details span{
+		padding-right: 10px;
+	}
+
 
 	#split{
 		display: grid;
@@ -410,6 +438,21 @@ nav li:hover{
 		grid-column: 1 / span 4;
 	}
 
+	#mex-rice{
+		grid-column: 1;
+	}
+
+	#salsa, #tort{
+		position: relative;
+		left: 350px;
+		bottom: 175px;
+		grid-column: 2/ span 4;
+	}
+
+	#images span {
+		display: grid;;
+	}
+
 	footer img{
 		width: 25%;
 	}
@@ -418,6 +461,7 @@ nav li:hover{
 		position: relative;
 		right: 250px;
 		bottom: 75px;
+		z-index: -1;
 	}
 
 	#social{
@@ -459,6 +503,23 @@ nav li:hover{
 	}
 
 
+	nav{
+		height: 80px;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav li img {
+		display:flex;
+		visibility: visible;
+	}
+	
+
+
+
+
 
 
 
@@ -478,7 +539,7 @@ nav li:hover{
 	
 	#top{
 		display: grid;
-		grid-row: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	#top img{
@@ -509,9 +570,71 @@ nav li:hover{
 		bottom: 50px;
 	}
 
+	#details ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		
+	}
+
+	#details ul span::after{
+		content: "\A";
+     	white-space: pre;
+    	display: block;
+	}
+
+	#details{
+		display: grid;
+		background-color: var(--black);
+		color: var(--blue);
+		padding-top: 10px;
+	}
+
+	#split{
+		display: grid;
+		grid-template-columns: 1fr 2fr 2fr;
+
+	}
+
+	#directions{
+		grid-column: 2/ span 3;
+	}
+
+	#directions li{
+		padding-bottom: 25px ;
+	}
+	
+	#ingredients li{
+		padding-bottom: 20px;
+	}
+
+	footer img{
+		width: 20%;
+	}
+
+	footer{
+		display: flex;
+		position: relative;
+		left: 50px;
+	}
+
+	#social ul{
+		display: flex;
+		gap: 100px;
+		position: relative;
+		left: 800px;
+	}
+
+	footer p{
+		display: block;
+		max-width: 14ch;
+	}
+
+	.para {
+		position: relative;
+		top: 30px;
+		right: 150px;
+	}
+
 
 	
-
-
-
 }
