@@ -309,9 +309,6 @@ nav li:hover{
 }
 
 @media screen and (min-width: 414px) {
-	h1{
-		color: red;
-	}
 
 	nav {
 		grid-area: nav;
@@ -379,7 +376,6 @@ nav li:hover{
 
 @media screen and (min-width: 768px) {
 	h1{
-		color: orange;
 		text-align: left;
 	}
 
@@ -545,7 +541,6 @@ nav li:hover{
 
 @media screen and (min-width: 1280px) {
 	h1{
-		color: green;
 		text-align: center;
 	}
 
